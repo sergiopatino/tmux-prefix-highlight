@@ -16,7 +16,7 @@ Prefix on:
 
 Just add `#{prefix_highlight}` to your left/right status bar.
 
-```tmux.confi
+```tmux.conf
 set -g status-right '#{prefix_highlight} | %a %Y-%m-%d %H:%M'
 ```
 
@@ -70,6 +70,13 @@ comma-separated list of colors and attributes:
 ```tmux.conf
 set -g @prefix_highlight_show_copy_mode 'on'
 set -g @prefix_highlight_copy_mode_attr 'fg=black,bg=yellow,bold' # default is 'fg=default,bg=yellow'
+```
+
+The `prefix` prompt and `copy` prompt can also be configured:
+
+```tmux.conf
+set -g @prefix_highlight_prefix_prompt 'Wait'
+set -g @prefix_highlight_copy_prompt 'Copy'
 ```
 
 Additionally, the plugin can be configured to attach optional affixes to the
